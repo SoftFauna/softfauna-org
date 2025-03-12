@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoftFauna</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="frontend.js" async></script>
+</head>
+<body>
+    <header class="container">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://www.softfauna.org/">
+                    <img src="#" alt="page logo">
+                </a> <!-- logo -->
+
+                <a role="button" class="navbar-burger">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a> <!-- burger -->
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="#"> Home </a>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link"> Products </a>
+                        <div class="navbar-dropdown">
+                            <a class="navbar-item" href="#"> sfsuppliment </a>
+                            <a class="navbar-item" href="#"> hemlock-argparser </a>
+                        </div>
+                    </div>
+                    <a class="navbar-item" href="#"> Documentation </a>
+                    <a class="navbar-item" href="#"> About </a>
+                    <a class="navbar-item" href="#"> Contact </a>
+                </div> <!-- navbar start -->
+
+                <div class="navbar-end">
+                    <div class="navbar-item"> <a class="button" href="#"> <strong>Github</strong> </a> </div>
+                    <div class="navbar-item"> <a class="button is-primary" href="#"> <strong>Download</strong> </a> </div>
+                </div> <!-- navbar end -->
+            </div> <!-- navbar menu -->
+        </nav> <!-- navbar -->
+    </header>
+    
+    <main>
+        <!-- landing -->
+        <section class="hero is-link is-fullheight-with-navbar">
+            <div class="hero-body">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column">
+                            <h2 class="subtitle">Welcome to</h2>
+                            <h1 class="title">SoftFauna.org</h1>
+                            <p>An open-source software developement organization.</p>
+                        </div>
+                        <div class="column is-hidden-touch">
+                            <img src="#" alt="beautiful artwork">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- content -->
+        <section class="section">
+            <div class="container">
+                <h1 class="title">Featured Products</h1>
+
+                <section class="section">
+                    <img src="#" alt="sfsuppliment logo">
+                    <h2 class="subtitle" href="#"> sfsuppliment </h2>
+                    <p class="pb-3">
+                        SoftFauna Suppliment is a C library which acts as a 
+                        suppliment ontop of the C standard library. It provides 
+                        many usefull macro's such as ARRLEN, MIN, MAX, and ABS, 
+                        aswell as extending the available string and array 
+                        operations. SFSuppliment adds many highlevel convience 
+                        features to ANSI C to speed up developement times and 
+                        overhead.
+                    </p>
+                    <a class="button is-outlined is-primary" href="#">Read More!</a>
+                </section>
+                <section class="section">
+                    <img src="#" alt="hemlock-argparser logo">
+                    <h2 class="subtitle" href="#"> hemlock-argparser </h2>
+                    <p class="pb-3">
+                        SoftFauna's Arguement Parser takes the pain out of 
+                        parsing console arguements, flags, and options. 
+                        Implementing an automated parser, type checking, type 
+                        conversions, returns, and error logging all through 
+                        one API. Additionally, generate brilliant help and 
+                        version pages at runtime using hemlock-argparser's 
+                        generate commands and optional coloured printing.
+                    </p>
+                    <a class="button is-outlined is-primary" href="#">Read More!</a>
+                </section>
+            </div>
+        </section>
+
+    </main>
+   
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <a href="https://github.com/SoftFauna/">
+                <img width="30" height="30" src="/assets/github/github-mark-white.svg" alt="github logo">
+            </a>
+            <hr>
+            <p>
+                <a href="https://www.softfauna.org/"><strong>SoftFauna.org</strong></a> |
+                Copyright (c) 2025 <a href="#">The SoftFauna Team</a> |
+                <a href="https://github.com/SoftFauna/softfauna-site/">Website Source</a>
+            </p>
+            <p>Huge thanks to the wonderful artists <a href="#">who's</a> Creative Common assets helped make made this site possible.</p>
+        </div>
+    </footer>
+</body>
+</html>
