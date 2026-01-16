@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NorthStar Advantage Documentation - SoftFauna</title>
+</head>
+<body>
+  <article>
+    <h1>NorthStar Advantage Computer</h1>
+    <section>
+      <p><strong>THIS DOCUMENT IS A WORK-IN-PROGRESS</strong></p>
+      <p>
+        The NorthStar Advantage, shortened to Advantage throughout this page, 
+        is a z80-based business focussed all-in-one microcomputer designed and 
+        sold by NorthStar Computer Systems, Inc. cerca 1981.
+      </p>
+    </section>
+    <section>
+      <h2>Computer Specs</h2>
+      <table>
+        <tr>
+          <th>CPU</th>
+          <td>z80A 4MHz</td>
+        </tr>
+        <tr>
+          <th>Memory</th>
+          <td>64KB</td>
+        </tr>
+        <tr>
+          <th>BOOT ROM</th>
+          <td>2KB</td>
+        </tr>
+        <tr>
+          <th>Video Memory</th>
+          <td>20KB</td>
+        </tr>
+        <tr>
+          <th>Display</th>
+          <td>640x240px 4:3 11" Green Monochrome CRT</td>
+        </tr>
+        <tr>
+          <th>Floppy Drives</th>
+          <td>
+            Dual [model], 10 Hard-Sectors, Supports both DSDD(360KB) and 
+            SSDD(170KB)
+          <td>
+        </tr>
+        <tr>
+          <th>Hard Disk</th>
+          <td>Optional MFM Hard Disks: 5MB, 10MB, 15MB</td>
+        </tr>
+        <tr>
+          <th>Keyboard</th>
+          <td>91 key, N-key rollover (w/ 7-key buffer)</td>
+        </tr>
+        <tr>
+          <th>Extra Specs</th>
+          <td>
+            Speaker, 
+            Parallel Port, 
+            Syncronous/Asyncronous Serial, 
+            optional 8088 co-processor
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Operating Systems</h2>
+      <p>this list is non-exaustive.</p>
+      <ul>
+        <li>GRAPHICS CP/M v2.x</li>
+        <li>NorthStar GRAPHICS DOS v1.x &ampr; v2.x</li>
+        <li>MS-DOS v1.x (with optional 8088 co-processor)</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Official Documentation</h2>
+      <p>this list is non-exaustive.</p>
+      <p>
+        Some information listed in the manuals is incorrect, please refer to
+        the <a href="#unofficial-documentation">Unofficial Documentation</a>
+        section for manual corrections and for more undocumented features.
+      </p>
+      <ul>
+        <li><a href="#">NorthStar Advantage Technical Manual</a></li>
+        <li><a href="#">NorthStar Advantage User Manual</a></li>
+        <li><a href="#">NorthStar GRAPHICS CP/M User Manual</a></li>
+        <li><a href="#">NorthStar GRAPHICS DOS User Manual</a></li>
+        <li><a href="#">NorthStar GRAPHICS BASIC User Manual</a></li>
+      </ul>
+    </section>
+    <section>
+      <h2>Disk Archives</h2>
+      <ul>
+        <li><a href="#"></a></li>
+      </ul>
+    </section>
+    <section>
+      <h2 name="unofficial-documentation">Unofficial Documentation</h2>
+      <section class="correction">
+        <h3>Floppy Sector Size</h3>
+        <p>
+          The Technical Manual lists the Sector size as 256B on page [PAGE_A], 
+          and then again as 128B on page [PAGE_B]. The first entry of 256B is
+          correct; the later 128B specification is a miss-print.
+        </p>
+      </section>
+      <section class="correction">
+        <h3>Floppy CRC Calculation</h3>
+        <p>
+          The Technical Manual provides incorrect formula for CRC calculation.
+        </p>
+        <p>
+          While disassembling CP/M's disk i/o BIOS procedures, I noticed that 
+          the CRC calculation did not match what was documented. Writing NSAE 
+          proved that point further.
+        </p>
+        <p>
+          Do note that the Advantage both calculates and checks CRC in software 
+          only, the core calc/check logic is handled by the BIOS and/or 
+          Operating System. This correction is known to hold true for 
+          NorthStar's CP/M and NSGDOS OSs'.
+        </p>
+        <table>
+          <tr>
+            <th>Incorrect CRC Calc</th>
+            <td><code>TODO</code></td>
+          </tr>
+          <tr>
+            <th>Corrected CRC Calc</th>
+            <td><code>TODO</code></td>
+          </tr>
+        </table>
+      </section>
+    </section>
+  </article>
+</body>
+</html>
