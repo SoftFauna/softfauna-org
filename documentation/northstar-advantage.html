@@ -6,63 +6,117 @@
     <title>NorthStar Advantage Documentation - SoftFauna</title>
 </head>
 <body>
-  <article>
+  <header>
     <h1>NorthStar Advantage Computer</h1>
-    <section>
-      <p><strong>THIS DOCUMENT IS A WORK-IN-PROGRESS</strong></p>
-      <p>
-        The NorthStar Advantage, shortened to Advantage throughout this page, 
-        is a z80-based business focussed all-in-one microcomputer designed and 
-        sold by NorthStar Computer Systems, Inc. cerca 1981.
-      </p>
-    </section>
+    <p><strong>THIS DOCUMENT IS A WORK-IN-PROGRESS</strong></p>
+    <p>
+      The NorthStar Advantage, shortened to Advantage throughout this page, is 
+      a z80-based business focussed all-in-one microcomputer designed and sold 
+      by NorthStar Computer Systems, Inc. cerca 1981.
+    </p>
+  </header>
+  <article>
     <section>
       <h2>Computer Specs</h2>
       <table>
+        <!-- {{{ -->
+        <tr> 
+          <th>Dimensions</th>
+          <td>48 cm wide x 51 cm long x 31.5 cm high</td>
+        </tr>
+        <tr>
+          <th>Net Weight</th>
+          <td>19.5 kg (43 lbs)</td>
+        </tr>
         <tr>
           <th>CPU</th>
-          <td>z80A 4MHz</td>
+          <td>Z80 Microprocessor, operating speed: 4MHz</td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>8035 auxiliary processor for keyboard and disk</td>
         </tr>
         <tr>
           <th>Memory</th>
-          <td>64KB</td>
-        </tr>
-        <tr>
-          <th>BOOT ROM</th>
-          <td>2KB</td>
-        </tr>
-        <tr>
-          <th>Video Memory</th>
-          <td>20KB</td>
-        </tr>
-        <tr>
-          <th>Display</th>
-          <td>640x240px 4:3 11" Green Monochrome CRT</td>
-        </tr>
-        <tr>
-          <th>Floppy Drives</th>
           <td>
-            Dual [model], 10 Hard-Sectors, Supports both DSDD(360KB) and 
-            SSDD(170KB)
-          <td>
+            64K byte Main RAM<br/>
+            20K byte Display RAM<br/>
+            2K byte Boot PROM
+          </td>
         </tr>
         <tr>
-          <th>Hard Disk</th>
-          <td>Optional MFM Hard Disks: 5MB, 10MB, 15MB</td>
+          <th>Screen</th>
+          <td>
+            28 cm (11 in) diagonal <br/>
+            P31 phosphor (green)
+          </td>
+        </tr>
+        <tr>
+          <th>Grid</th>
+          <td>
+            1920 character display,<br/>
+            24 lines by 80 characters<br/>
+            5x7 character in 8x10 dot matrix
+          </td>
+        </tr>
+        <tr>
+          <th>Graphics resolution</th>
+          <td>240 pixels high x 640 pixels wide</td>
+        </tr>
+        <tr>
+          <th>Refresh rate</th>
+          <td>50 or 60 Hz, depending on line frequency</td>
         </tr>
         <tr>
           <th>Keyboard</th>
-          <td>91 key, N-key rollover (w/ 7-key buffer)</td>
-        </tr>
-        <tr>
-          <th>Extra Specs</th>
           <td>
-            Speaker, 
-            Parallel Port, 
-            Syncronous/Asyncronous Serial, 
-            optional 8088 co-processor
+            87 Keys, N-Key roll-over for fast data entry (w/ 7-key buffer)
           </td>
         </tr>
+        <tr>
+          <th>Number of drives</th>
+          <td>Two floppy disk drives (OR One and a Harddisk)</td>
+        </tr>
+        <tr>
+          <th>Diskettes</th>
+          <td>
+            Standard 5-1/4 in floppy diskettes. 
+            Recomended type: Dysan part No. 107/2D.<br/>
+            512 bytes/sector, 10 (hard) sectors/track, 35 tracks/side, 
+            2 sides/diskette
+        </tr>
+        <tr>
+          <th>Storage</th>
+          <td>360K bytes for DSDD, 175K bytes for SSDD (formatted)</td>
+        </tr>
+        <tr>
+          <th>Disk Speed</th>
+          <td>300 rpm &plusmn; 3.0%</td>
+        </tr>
+        <tr>
+          <th>I/O Bus</th>
+          <td>
+            Slots for up to six(6) plug-in boards, Each board addressed by 
+            16 I/O addresses
+          </td>
+        </tr>
+        <tr>
+          <th>Serioal I/O (SIO)</th>
+          <td>
+            RS232 Seerial Port, DB25<br/>
+            Current loop option<br/>
+            Asynchronous: 45 baud to 19.2 kilobaud<br/>
+            Synchonous: 2400 baud to 51 kilobaud
+          </td>
+        </tr>
+        <tr>
+          <th>Parallel I/O (PIO)</th>
+          <td>
+            8-bit data in and out with three handshake lines for each port<br/>
+            Maximum speed is limited by the processor.
+          </td>
+        </tr>
+        <!-- }}} -->
       </table>
     </section>
     <section>
@@ -70,7 +124,7 @@
       <p>this list is non-exaustive.</p>
       <ul>
         <li>GRAPHICS CP/M v2.x</li>
-        <li>NorthStar GRAPHICS DOS v1.x &ampr; v2.x</li>
+        <li>NorthStar GRAPHICS DOS v1.x &amp; v2.x</li>
         <li>MS-DOS v1.x (with optional 8088 co-processor)</li>
       </ul>
     </section>
@@ -86,7 +140,7 @@
         <li><a href="#">NorthStar Advantage Technical Manual</a></li>
         <li><a href="#">NorthStar Advantage User Manual</a></li>
         <li><a href="#">NorthStar GRAPHICS CP/M User Manual</a></li>
-        <li><a href="#">NorthStar GRAPHICS DOS User Manual</a></li>
+        <li><a href="https://archive.org/details/north-star-graphics-dos">NorthStar GRAPHICS DOS User Manual</a></li>
         <li><a href="#">NorthStar GRAPHICS BASIC User Manual</a></li>
       </ul>
     </section>
@@ -97,43 +151,66 @@
       </ul>
     </section>
     <section>
-      <h2 name="unofficial-documentation">Unofficial Documentation</h2>
+      <h2 id="unofficial-documentation">Unofficial Documentation</h2>
       <section class="correction">
-        <h3>Floppy Sector Size</h3>
+        <h3>Floppy Sync2 Calculation</h3>
+        <!-- {{{ -->
         <p>
-          The Technical Manual lists the Sector size as 256B on page [PAGE_A], 
-          and then again as 128B on page [PAGE_B]. The first entry of 256B is
-          correct; the later 128B specification is a miss-print.
-        </p>
-      </section>
-      <section class="correction">
-        <h3>Floppy CRC Calculation</h3>
-        <p>
-          The Technical Manual provides incorrect formula for CRC calculation.
+          The formula listed on page 3-35 of the Technical manual does not 
+          match the sync2 calculation used by Northstar's CP/M or GDOS 
+          BIOSs.
         </p>
         <p>
-          While disassembling CP/M's disk i/o BIOS procedures, I noticed that 
-          the CRC calculation did not match what was documented. Writing NSAE 
-          proved that point further.
+          Please note that this byte is checked in software, NOT hardware. As
+          such, the formula may differ between different OSs. But that the 
+          "Corrected" formula IS what was used in Northstar's official Code.
         </p>
         <p>
-          Do note that the Advantage both calculates and checks CRC in software 
-          only, the core calc/check logic is handled by the BIOS and/or 
-          Operating System. This correction is known to hold true for 
-          NorthStar's CP/M and NSGDOS OSs'.
+          formulas are assuming all operators have equal priority, read/exec 
+          left to right.
+        </p>
+        <p>
+          both formulas expect to take a side, track, and sector as inputs. In 
+          the case of Corrected Sync2, right_rotate is a wrapping &gt;&gt;.
         </p>
         <table>
           <tr>
-            <th>Incorrect CRC Calc</th>
-            <td><code>TODO</code></td>
+            <th>Incorrect Sync2</th>
+            <td><code>(sector + (16 * track)) &amp; 0xff</code></td>
           </tr>
           <tr>
-            <th>Corrected CRC Calc</th>
-            <td><code>TODO</code></td>
+            <th>Corrected Sync2</th>
+            <td><code>
+              (((track | (side &lt;&lt; 6)) right_rotate 2) &amp; 0x0f | sector
+            </code></td>
+          </tr>
+          <tr>
+            <th>Optimized Sync2</th>
+            <td><code>
+              ((track &amp; 0x03) &lt;&lt; 6) | (side &lt;&lt; 4) | sector
+            </code></td>
           </tr>
         </table>
+        <!-- }}} -->
       </section>
     </section>
+    <section>
+      <h2>Additional Resources</h2>
+      <ul>
+        <li><a href="https://jackstrangio.au/advantage_emulator">Jack Strangio's ADE</a> GTK Emulator, Manuals, Disk Images.</li>
+        <li><a href="https://github.com/Holgli/NorthstarAdvantageUtilities-">Northstar Advantage Utilities</a> for file transfer and archival.</li>
+        <li><a href="https://github.com/sage-etcher/nsae">NSAE</a> OpenGL Emulator.</li>
+      </ul>
+    </section>
   </article>
+  <footer>
+    <p>
+      Copyright (c) 2026 Sage I. Hendricks&nbsp;|&nbsp;
+      License MIT&nbsp;|&nbsp;
+      <a href="https://github.com/SoftFauna/softfauna-org">Source Code</a>
+    </p>
+  </footer>
 </body>
 </html>
+<!-- vim: ts=2 sts=2 sw=2 et fdm=marker 
+-->
