@@ -12,7 +12,7 @@
     <p>
       The NorthStar Advantage, shortened to Advantage throughout this page, is 
       a z80-based business focussed all-in-one microcomputer designed and sold 
-      by NorthStar Computer Systems, Inc. cerca 1981.
+      by NorthStar Computer Systems, Inc. circa 1981.
     </p>
   </header>
   <article>
@@ -137,11 +137,31 @@
         section for manual corrections and for more undocumented features.
       </p>
       <ul>
-        <li><a href="#">NorthStar Advantage Technical Manual</a></li>
-        <li><a href="#">NorthStar Advantage User Manual</a></li>
-        <li><a href="#">NorthStar GRAPHICS CP/M User Manual</a></li>
-        <li><a href="https://archive.org/details/north-star-graphics-dos">NorthStar GRAPHICS DOS User Manual</a></li>
-        <li><a href="#">NorthStar GRAPHICS BASIC User Manual</a></li>
+        <li>
+          <a href="#">
+            NorthStar Advantage Technical Manual
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            NorthStar Advantage User Manual
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            NorthStar GRAPHICS CP/M User Manual
+          </a>
+        </li>
+        <li>
+          <a href="https://archive.org/details/north-star-graphics-dos">
+            NorthStar GRAPHICS DOS User Manual
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            NorthStar GRAPHICS BASIC User Manual
+          </a>
+        </li>
       </ul>
     </section>
     <section>
@@ -152,7 +172,59 @@
     </section>
     <section>
       <h2 id="unofficial-documentation">Unofficial Documentation</h2>
-      <section class="correction">
+      <section>
+        <h3>Initial State (Pre-PROM)</h3>
+        <!-- {{{ -->
+        <p>
+          
+        </p>
+        <!-- }}} -->
+      </section>
+      <section>
+        <h3>Keyboard MI Flag Command</h3>
+        <!-- {{{ -->
+        <p>
+          This command, command 3, returns the <b>previous</b> state of the 
+          register in bit 0 of status reg 2. The manual implies that it should
+          return the newly complimented value, but their DOS expects otherwise.
+        </p>
+        <!-- }}} -->
+      </section>
+      <section>
+        <h3>Track Step Counting</h3>
+        <!-- {{{ -->
+        <p>
+          The track counts on side 0 from inner to outer, 0-34, and on side 1 
+          from <b>outer to inner</b>, 35-69. Either side is incremented in 
+          inverse direction to the other.
+        </p>
+        <!-- }}} -->
+      </section>
+      <section>
+        <h3>Show Sector Command</h3>
+        <!-- {{{ -->
+        <p>
+          Something to keep in mind. The "Show Sector" command (control reg 
+          command 0) returns the previous sector's number. So to know we are at
+          sector 2 we wait until we read sector 1 from the command.
+        </p>
+        <p>
+          Okay. The floppy disks are hard sectored. they have 10 hard sectors, 
+          but they have 11 holes because sector 0 has two punchouts to easier 
+          detect the start. The second punchout generates the index pulse.
+        </p>
+        <p>
+          When the index pulse is detected it returns 0xf instead of, as you 
+          would expect, 9. (since it returns the previous when we are at sector
+          0, it returns 9's sector which gets replaced by 0xf given the index).
+        </p>
+        <code>
+          Sector Number Order:
+          0 1 2 3 4 5 6 7 8 F
+        </code>
+        <!-- }}} -->
+      </section>
+      <section>
         <h3>Floppy Sync2 Calculation</h3>
         <!-- {{{ -->
         <p>
@@ -197,9 +269,24 @@
     <section>
       <h2>Additional Resources</h2>
       <ul>
-        <li><a href="https://jackstrangio.au/advantage_emulator">Jack Strangio's ADE</a> GTK Emulator, Manuals, Disk Images.</li>
-        <li><a href="https://github.com/Holgli/NorthstarAdvantageUtilities-">Northstar Advantage Utilities</a> for file transfer and archival.</li>
-        <li><a href="https://github.com/sage-etcher/nsae">NSAE</a> OpenGL Emulator.</li>
+        <li>
+          <a href="https://github.com/sage-etcher/nsae">
+            Sage Hendricks's NSAE
+          </a> 
+          OpenGL 1.0 Emulator (linux).
+        </li>
+        <li>
+          <a href="https://jackstrangio.au/advantage_emulator">
+            Jack Strangio's ADE
+          </a> 
+          GTK Emulator (linux), Manuals, Disk Images.
+        </li>
+        <li>
+          <a href="https://github.com/Holgli/NorthstarAdvantageUtilities-">
+            Northstar Advantage Utilities
+          </a>
+          Archival and File Transfers.
+        </li>
       </ul>
     </section>
   </article>
